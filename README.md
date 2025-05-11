@@ -4,6 +4,9 @@ A comprehensive AI-powered system that integrates multiple AI capabilities for s
 
 ![System Architecture](https://app.eraser.io/workspace/NjlgvzEzm0bygGKFcO9f?origin=share)
 
+![image](https://github.com/user-attachments/assets/04c0259c-a959-4024-8784-dff9e215e2b1)
+
+
 ## Table of Contents
 
 - [Overview](#overview)
