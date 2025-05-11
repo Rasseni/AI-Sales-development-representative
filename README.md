@@ -290,4 +290,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-For questions or support, please contact [mohdjamikhann@example.com](mailto:mohdjamikhann@example.com).
+For questions or support, please contact [mohdjamikhann@gmail.com](mailto:mohdjamikhann@gmail.com).
