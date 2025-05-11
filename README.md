@@ -16,7 +16,6 @@ A comprehensive AI-powered system that integrates multiple AI capabilities for s
   - [Meeting AI Module](#meeting-ai-module)
   - [Knowledge Base Module](#knowledge-base-module)
   - [Frontend Module](#frontend-module)
-- [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
 - [Development](#development)
 - [Deployment](#deployment)
@@ -186,99 +185,14 @@ The frontend provides a user-friendly interface for the system.
 - Groq API key
 - MeetingBaaS account
 
-### Backend Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/ai-sdr.git
-   cd ai-sdr
-   ```
-
-2. Set up Python environment:
-   ```bash
-   cd agents
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-
-3. Create environment variables file:
-   ```bash
-   cp .env.example .env
-   ```
-
-4. Edit the `.env` file with your API keys and configurations:
-   ```
-   # LLM API Keys
-   GROQ_API_KEY=your_groq_api_key
-   JINA_API_KEY=your_jina_api_key
-   
-   # Database Connections
-   SUPABASE_URL=your_supabase_url
-   SUPABASE_ANON_KEY=your_supabase_key
-   REDIS_HOST=your_redis_host
-   REDIS_PASSWORD=your_redis_password
-   
-   # Vector Database
-   PINECONE_API_KEY=your_pinecone_key
-   
-   # Meeting API
-   BOT_API_KEY=your_meetingbaas_key
-   
-   # LinkedIn (for scraping)
-   LINKEDIN_EMAIL=your_linkedin_email
-   LINKEDIN_PASSWORD=your_linkedin_password
-   ```
-
-5. Start the backend server:
-   ```bash
-   uvicorn main:app --reload --port 8000
-   ```
-
-### Frontend Setup
-
-1. Navigate to the frontend directory:
-   ```bash
-   cd ../
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Create environment variables file:
-   ```bash
-   cp .env.example .env.local
-   ```
-
-4. Edit the `.env.local` file:
-   ```
-   NEXT_PUBLIC_API_URL=http://localhost:8000
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-   ```
-
-5. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-### Docker Setup (Optional)
-
-1. Build and run using Docker Compose:
-   ```bash
-   docker-compose up -d
-   ```
-
 ## Usage
 
 ### Access the Application
 
-Once set up, access the application at:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
-- API Documentation: http://localhost:8000/docs
+Login with these creds:
+- Email:jamikhann@gmail.com
+- Pass: abcd1234
+- Or directly login with github
 
 ### Key Workflows
 
@@ -306,43 +220,6 @@ Once set up, access the application at:
    - Use the search bar in the Meeting Notes tab
    - Ask questions about past meetings
    - View answers with source information
-
-## Development
-
-### Project Structure
-
-```
-├── agents/                   # Backend Python code
-│   ├── AI-Researcher-Analyzer-Agent/  # LinkedIn scraper
-│   ├── core/                 # Core utilities
-│   ├── services/             # Service modules
-│   ├── utils/                # Utility functions
-│   ├── main.py               # FastAPI entry point
-│   └── requirements.txt      # Python dependencies
-│
-├── app/                      # Next.js app directory
-│   ├── (auth)/               # Authentication routes
-│   ├── (private)/            # Protected routes
-│   ├── api/                  # API routes
-│   └── globals.css           # Global styles
-│
-├── components/               # React components
-│   ├── dashboard/            # Dashboard components
-│   ├── ui/                   # UI components (shadcn)
-│   └── buttons/              # Button components
-│
-├── lib/                      # Shared libraries
-├── hooks/                    # React hooks
-├── public/                   # Static assets
-├── utils/                    # Utility functions
-│   ├── redis.ts              # Redis client
-│   └── supabase/             # Supabase clients
-│
-├── next.config.js            # Next.js configuration
-├── package.json              # Node dependencies
-├── README.md                 # Project documentation
-└── docker-compose.yml        # Docker Compose config
-```
 
 ### Adding New Features
 
@@ -406,14 +283,6 @@ Once set up, access the application at:
 - **Docker**: Containerization
 - **Railway**: Backend deployment
 - **Vercel**: Frontend deployment
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## License
 
